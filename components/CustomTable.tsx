@@ -123,7 +123,7 @@ const CustomTable: React.FC<CustomTableProps> = ({
                     <Checkbox
                       color="primary"
                       checked={checkboxData.includes(row[1]?.id)}
-                      onChange={() => handleCheckbox(row[1]?.id)}
+                      // onChange={() => handleCheckbox(row[1]?.id || '')}
                     />
                   </TableCell>
                 )}

@@ -236,7 +236,7 @@ const EventCalendar = () => {
               startAccessor="start"
               components={{ event: EventInfo }}
               endAccessor="end"
-              defaultView={calView}
+              defaultView="month"
               onView={(view) => {
                 console.log(view);
                 setCalView(view);
