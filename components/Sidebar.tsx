@@ -10,6 +10,7 @@ import {
   useTheme,
   Divider,
   Stack,
+  Box,
 } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
@@ -115,7 +116,8 @@ export const Sidebar: React.FC = () => {
       className="sidebar"
       theme={theme}
       sx={{
-        width: open ? "28%" : "7%",
+        width: open ? "28%" : "60px",
+        minWidth: { lg:  open? "200px": "60px" , xs: open ? "100%" : "60px"  },
         backgroundColor: "background.paper",
         color: "black",
       }}
@@ -126,16 +128,17 @@ export const Sidebar: React.FC = () => {
         marginTop={2}
         alignItems="center"
         className="cursor-pointer"
+        mb={2}
       >
         <div onClick={() => setOpen(!open)}>
           <ArrowForwardIcon />
         </div>
       </Stack>
       {sidebarData.map((item, index) => (
-        <ListItem key={index}>
-          <Link href={item.endpoint} style={{ width: "100%" }}>
+        <ListItem key={index} sx={{ px: 0, overflow: "hidden", width: "100%", textOverflow: "ellipsis", whiteSpace: 'nowrap' }}>
+          <Link style={{ width: '100%' }} href={item.endpoint}>
             <StyledListItem>
-              <ListItemIcon className="listItemIcon">{item.icon}</ListItemIcon>
+              <ListItemIcon className="ml-0">{item.icon}</ListItemIcon>
               <ListItemText disableTypography primary={item.title} />
               <ListItemIcon className="listItemIcon flex justify-end">
                 <ArrowForwardIosIcon />

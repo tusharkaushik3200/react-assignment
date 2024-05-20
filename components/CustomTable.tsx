@@ -66,7 +66,7 @@ const CustomTable: React.FC<CustomTableProps> = ({
     setPage(0);
   };
 
-  const rows = data.map((item) => {
+  const rows = data?.map((item) => {
     return [
       // First element of the array is to show data in the table rows
       cols.map((col) => item[col]),

@@ -22,7 +22,7 @@ const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(
   return <MuiAlert elevation={20} ref={ref} variant="filled" {...props} />;
 });
 
-const CustomizedSnackbars: React.FC<CustomizedSnackbarsProps> = (props) => {
+const CustomizedSnackbars: React.FC<any> = (props) => {
   const { setMsgData, msgData } = props;
   const {
     open = false,
