@@ -86,6 +86,7 @@ export default function Work() {
         severity: "success",
         open: true,
       });
+      
       setTimeout(() => {
         window.location.reload();
       }, 1500);
