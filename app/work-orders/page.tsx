@@ -18,7 +18,7 @@ export default function Work() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        let res = await fetch("http://localhost:3000/api/rollup", {
+        let res = await fetch("https://react-assignment-mocha.vercel.app/api/rollup", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -73,7 +73,7 @@ export default function Work() {
   ];
 
   const handleDelete = async (id: any) => {
-    const response = await fetch(`http://localhost:3000/api/rollup/${id}`, {
+    const response = await fetch(`https://react-assignment-mocha.vercel.app/api/rollup/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

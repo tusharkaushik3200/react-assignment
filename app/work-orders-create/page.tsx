@@ -77,7 +77,7 @@ export default function CreateWorkOrders() {
 
     formData.id = uuidv4(); // Add id to formData
 
-    const response = await fetch("http://localhost:3000/api/rollup", {
+    const response = await fetch("https://react-assignment-mocha.vercel.app/api/rollup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -53,7 +53,7 @@ const CreateFuelStations: React.FC = () => {
   React.useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch(`http://localhost:3000/api/rollup/${id}`, {
+        const res = await fetch(`https://react-assignment-mocha.vercel.app/api/rollup/${id}`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -103,7 +103,7 @@ const CreateFuelStations: React.FC = () => {
       return;
     }
 
-    const response = await fetch(`http://localhost:3000/api/rollup/${id}`, {
+    const response = await fetch(`https://react-assignment-mocha.vercel.app/api/rollup/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
